@@ -15,18 +15,24 @@
         </a>
     </nav>
 
-    <main class="container" role="main">
-        <div class="treasure panel panel-default">
-        {% for treasure in treasures %}
-            <div class="panel-heading">
-                <h2 class="panel-title">{{ treasure.name }}</h2>
-            </div>
-            <div class="panel-body">
-                    <div class="treasure-photo">
-                        <img src="{{ treasure.img_url }}" height="200">
+    <main class="container container">
+        <div class="row">
+            {% for treasure in treasures %}
+                <div class="col-md-4">
+                    <a href="/{{treasure.id}}/">
+                        <div class="treasure panel panel-default">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">{{ treasure.name }}</h2>
+                        </div>
+                    </a>
+                        <div class="panel-body">
+                                <div class="treasure-photo">
+                                    <img src="{{ treasure.img_url }}" width=100% height=auto>
+                                </div>
+                        </div>
                     </div>
 
-                    <table class="treasure-table">
+                    <!--<table class="treasure-table">
                         <tr>
                             <th>
                                 <img src="{% static 'images/material-icon.png' %}">
@@ -53,9 +59,15 @@
 
                             <td>{{ treasure.location }}</td>
                         </tr>
-                    </table>
-                </div>
-        {% endfor %}
+                    </table>-->
+                
+            </div>
+
+            {% if forloop.counter|divisibleby:3 and not forloop.last %}
+        </div><br><div class="row">
+            {% endif %}
+            {% endfor %}
+            
         </div>
     </main>
 </body>

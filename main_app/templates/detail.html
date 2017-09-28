@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    <link rel ="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    <title>TreasureGram</title>
+    
+    
+</head>
+<body>
+    <!--<h1>{{ treasure.name }} </h1>
+    <img src="{{ treasure.img_url }}">
+    <p> {{ treasure.value }}</p>
+    <p> {{ treasure.location }} </p>-->
+<main class="container container">
+   <div class="treasure panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">{{ treasure.name }}</h2>
+            </div>
+            <div class="panel-body">
+                    <div class="treasure-photo">
+                        <img src="{{ treasure.img_url }}" height="200">
+                    </div>
+            
+        
+
+                <table class="treasure-table">
+                    <tr>
+                        <th>
+                            <img src="{% static 'images/material-icon.png' %}">
+                            Material:
+                        </th>
+                        <td>{{ treasure.material }}</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="{% static 'images/value-icon.png' %}">
+                            Value:
+                        </th>
+                            <td>{% if treasure.value > 0 %}
+                                    {{ treasure.value }}
+                                {% else %}
+                                    Unknown
+                                {% endif %}</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="{% static "images/location-icon.png" %}" alt="Location Icon">
+                            Location:
+                        </th>
+
+                        <td>{{ treasure.location }}</td>
+                    </tr>
+                </table>
+        </div>
+    </div>
+</main>
+</body>
+</html>
