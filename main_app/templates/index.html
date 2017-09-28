@@ -15,7 +15,7 @@
                     </a>
                         <div class="panel-body">
                                 <div class="treasure-photo">
-                                    <img src="{{ treasure.img_url }}" width=100% height=auto>
+                                    <img src="{{ treasure.image.url }}" width=100% height=auto>
                                 </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
         
         <div class="panel-body">
 
-            <form action="post_url/" method="post">
+            <form enctype="multipart/form-data" action="post_url/" method="post">
             {% csrf_token %}
             <div class="field-wrapper">
             {{ form.as_p }}
