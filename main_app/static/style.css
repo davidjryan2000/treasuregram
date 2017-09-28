@@ -113,3 +113,17 @@ body {
   padding-left: 20px;
   width: 100%;
 }
+
+.fieldWrapper{
+ font-size: 10px;
+ color: #263d2c;
+ font-family: verdana, tahoma, serif;
+ white-space:nowrap;
+ display:inline;
+}
+
+.btn {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
