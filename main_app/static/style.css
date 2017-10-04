@@ -25,6 +25,15 @@ body {
   border-color: #ece4cf;
 }
 
+.navbar-right {
+  margin-right: 5%;
+}
+
+.navbar-text {
+  font-size: 1.2em;
+  color: #263d2c;
+}
+
 .panel {
   background: #fff6e8;
   border-color: #ece4cf;
