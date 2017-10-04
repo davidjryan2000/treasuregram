@@ -11,12 +11,18 @@
                         <div class="treasure panel panel-default">
                         <div class="panel-heading">
                             <h2 class="panel-title">{{ treasure.name }}</h2>
+                            <a class="panel-username"
+                                href="/user/{{treasure.user.username}}/">
+                                by: {{ treasure.user.username }}
+                            </a>
                         </div>
                     </a>
                         <div class="panel-body">
+                            <a href="/{{treasure.id}}/">
                                 <div class="treasure-photo">
                                     <img src="{{treasure.image.url }}" width=100% height=auto>
                                 </div>
+                            </a>
                         </div>
                     </div>
 
