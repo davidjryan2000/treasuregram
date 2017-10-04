@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load staticfiles %}
 
 
 {% block content %}
@@ -13,7 +13,7 @@
                 <h2 class="panel-title">{{ treasure.name }}</h2>
             </div>
             <div class="panel-body">
-                    <div class="treasure-photo">
+                    <div class="treasure-photo-detail">
                         <img src="{{ treasure.image.url }}" height="200">
                     </div>
             
