@@ -3,10 +3,6 @@
 
 
 {% block content %}
-    <!--<h1>{{ treasure.name }} </h1>
-    <img src="{{ treasure.img_url }}">
-    <p> {{ treasure.value }}</p>
-    <p> {{ treasure.location }} </p>-->
 <main class="container container">
    <div class="treasure panel panel-default">
             <div class="panel-heading">
@@ -47,6 +43,10 @@
                         <td>{{ treasure.location }}</td>
                     </tr>
                 </table>
+
+                <button id ="likes" data-id="{{treasure.id}}" class="btn btn-mini btn-danger glyphicon glyphicon-heart" type="button">
+                    {% if treasure.likes > 0 %} {{ treasure.likes }} {% endif %}
+                </button>
         </div>
     </div>
 </main>

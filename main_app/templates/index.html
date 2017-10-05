@@ -3,7 +3,7 @@
 
 {% block content %}
 
-    <main class="container container">
+    
         <div class="row">
             {% for treasure in treasures %}
                 <div class="col-md-4">
@@ -23,6 +23,10 @@
                                     <img src="{{treasure.image.url }}" width=100% height=auto>
                                 </div>
                             </a>
+
+                            <button id ="likes" data-id="{{treasure.id}}" class="btn btn-mini btn-danger glyphicon glyphicon-heart" type="button">
+                                {% if treasure.likes > 0 %} {{ treasure.likes }} {% endif %}
+                             </button>
                         </div>
                     </div>
                 
@@ -53,7 +57,7 @@
             </form>
         </div>
     </div>
-    </main>
+   
     {% endif %}
 
 {% endblock %}

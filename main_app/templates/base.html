@@ -21,8 +21,19 @@
         </a>
     </nav>
 
+    <main class="container container">
     {% block content %}
     {% endblock %}
+     </main>
+
+      <footer class="footer container text-center" role="contentinfo">
+        <img src="{% static 'images/brand-icon.png' %}" height="50" alt="">
+         TreasureGram
+        <img src="{% static 'images/brand-icon.png' %}" height="50" alt="">
+        </footer>
+
+        <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
 
 </body>
 </html>
